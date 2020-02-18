@@ -5,23 +5,26 @@
  DIST="";
   
  function install_extensions(){
-# C/C++ tools
+# Cpp
 code --install-extension ms-vscode.cpptools
-# CMake
-code --install-extension twxs.cmake
 # Python
 code --install-extension ms-python.python
-# SVN
-code --install-extension johnstoncode.svn-scm
+# CMake
+code --install-extension twxs.cmake
 # GIT
 code --install-extension eamodio.gitlens
+# SSH
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+# Containers
+code --install-extension ms-vscode-remote.remote-containers
 # PlantUML
 code --install-extension jebbs.plantuml
-# Docker
-code --install-extension ms-azuretools.vscode-docker
 # Markdown Lint
 code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension shd101wyy.markdown-preview-enhanced
+# Horizon Theme
+code --install-extension jolaleye.horizon-theme-vscode
 } 
 
 if [ "$OS" = "Ubuntu" ] || [ "$OS" = "Debian" ]; then    
