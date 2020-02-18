@@ -1,0 +1,22 @@
+{
+    "editor.overviewRulerBorder": false,
+    "window.menuBarVisibility": "hidden",
+    "window.restoreFullscreen": true,
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vs-minimal",
+    "workbench.colorTheme": "Horizon Italic",
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.hg": false,
+        "**/.vscode": true,
+        "**/CVS": false
+    },
+    "explorer.sortOrder": "filesFirst",
+    "window.closeWhenEmpty": true,
+    "editor.tabCompletion": "on",
+    "breadcrumbs.enabled": false,
+    "files.autoSave": "afterDelay",
+    "window.openFilesInNewWindow": "on",
+    "workbench.editor.enablePreview": false,
+    "editor.fontSize": 12
+}
