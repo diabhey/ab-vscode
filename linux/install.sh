@@ -3,7 +3,12 @@
  OS=$(lsb_release -si);
  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
  DIST="";
-  
+
+ function copy_settings(){
+     cp ../keybindings.json ~/.config/Code/User/keybindings.json
+     cp ../settings.json ~/.config/Code/User/settings.json
+ }
+
  function install_extensions(){
 # Cpp
 code --install-extension ms-vscode.cpptools
@@ -29,9 +34,9 @@ code --install-extension jolaleye.horizon-theme-vscode
 
 if [ "$OS" = "Ubuntu" ] || [ "$OS" = "Debian" ]; then    
     DIST="deb";
-    elif [ "$OS" = "CentOS" ]; then
+elif [ "$OS" = "CentOS" ]; then
     DIST="rpm";
-    else
+else
         echo "Unfortunately your operating system is not supported in distributed packages.";
         exit;
 fi
@@ -46,20 +51,21 @@ fi
 echo "Downloading latest version of vscode is starting...";
 wget -O $FILENAME $URLBASE;
 echo "Downloading finished\n";                  
-echo "Closing vscode...";
-for pid in $(pidof code); do kill -9 $pid; done
-    echo "vscode instance(s) closed."
-    echo "Installing latest version..."
-    if [ "$DIST" = "deb" ]; then
-        sudo dpkg -i $FILENAME;
-        else
-        sudo rpm -i $FILENAME;
-    fi
-    echo "Installation finished."
+echo "Installing latest version..."
+if [ "$DIST" = "deb" ]; then
+    sudo dpkg -i $FILENAME;
+    echo "Cleaning the *.deb"
+    rm *.deb          
+else
+    sudo rpm -i $FILENAME;
     echo "Cleaning the *.rpm"
-    rm *.rpm
-    echo "Install vs-code extensions"
-    install_extensions
-    echo "Starting new version of vscode..."
-    code &
-    exit;
+    rm *.rpm        
+fi
+echo "Installation finished."
+echo "Copy keybindings and settings"
+copy_settings
+echo "Install vs-code extensions"
+install_extensions
+echo "Starting new version of vscode..."
+code .
+exit;
