@@ -21,6 +21,10 @@ code --install-extension eamodio.gitlens
 # SSH
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-ssh-edit
+#Azure
+code --install-extension ms-vscode.azure-account
+code --install-extension ms-azuretools.vscode-azureappservice
+code --install-extension ms-vscode.azurecli
 # Containers
 code --install-extension ms-vscode-remote.remote-containers
 # PlantUML
