@@ -16,6 +16,10 @@ code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-vscode-remote.remote-ssh-edit
 #Poweshell
 code --install-extension ms-vscode.powershell
+#Azure
+code --install-extension ms-vscode.azure-account
+code --install-extension ms-azuretools.vscode-azureappservice
+code --install-extension ms-vscode.azurecli
 # Containers
 code --install-extension ms-vscode-remote.remote-containers
 # WSL
