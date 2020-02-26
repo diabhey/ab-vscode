@@ -12,11 +12,12 @@
         "**/CVS": false
     },
     "explorer.sortOrder": "filesFirst",
-    "window.closeWhenEmpty": true,
+    "window.closeWhenEmpty": false,
     "editor.tabCompletion": "on",
     "breadcrumbs.enabled": false,
     "files.autoSave": "afterDelay",
     "window.openFilesInNewWindow": "on",
     "workbench.editor.enablePreview": false,
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 11
 }
