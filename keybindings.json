@@ -56,7 +56,11 @@
         "when": "inKeybindings && inKeybindingsSearch"
     },
     {
-        "key": "meta+=",
-        "command": "workbench.action.toggleMaximizedPanel"
+        "key": "alt+=",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "alt+-",
+        "command": "workbench.action.terminal.resizePaneDown"
     }
 ]
